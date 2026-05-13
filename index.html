@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike | Just Do It</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <!-- Top Utility Bar -->
+        <div class="top-nav">
+            <div class="top-nav-left">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/37/Jumpman_logo.svg/1200px-Jumpman_logo.svg.png" alt="Jordan" style="height: 18px; opacity: 0.7;">
+            </div>
+            <div class="top-nav-right">
+                <a href="#">Find a Store</a>
+                <span>|</span>
+                <a href="#">Help</a>
+                <span>|</span>
+                <a href="#">Join Us</a>
+                <span>|</span>
+                <a href="#">Sign In</a>
+            </div>
+        </div>
+
+        <!-- Main Navigation -->
+        <nav id="navbar">
+            <div class="logo">
+                <a href="/">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21.58 6.4c-.13-.03-5.22-.64-10.87 2.37-4.11 2.21-6.17 5.75-6.72 7.03-.08.18-.04.38.1.51.1.09.23.14.36.14.05 0 .1-.01.16-.03.04-.01 5.38-1.93 11.23-1.64 3.39.16 5.86 1.48 6.06 1.59.1.06.22.09.33.09.11 0 .22-.03.32-.09.18-.11.27-.32.22-.52-.04-.15-.65-7.79-1.19-9.45z" fill="#000"/>
+                    </svg>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="https://www.nike.in/w/new-featured-667qz" target="_blank">New & Featured</a></li>
+                <li><a href="https://www.nike.in/w/men-shoes-nik1zy7ok" target="_blank">Men</a></li>
+                <li><a href="https://www.nike.in/w/women-shoes-5e1x6zy7ok" target="_blank">Women</a></li>
+                <li><a href="https://www.nike.in/w/kids-shoes-v4dhzy7ok" target="_blank">Kids</a></li>
+                <li><a href="https://www.nike.in/w/sports-shoes-zy7ok" target="_blank">Sports</a></li>
+                <li><a href="https://www.nike.in/w/lifestyle-shoes-13jkwzy7ok" target="_blank">Lifestyle</a></li>
+                <li><a href="https://www.nike.in/w/sale-shoes-3yaepzy7ok" target="_blank">Sale</a></li>
+            </ul>
+            <div class="nav-icons">
+                <div class="search-box">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                    <input type="text" placeholder="Search">
+                </div>
+                <a href="#" class="icon-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                </a>
+                <a href="#" class="icon-btn cart-icon-btn" id="cart-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                    <span class="cart-count">0</span>
+                </a>
+                <div class="menu-toggle" id="mobile-menu">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Cart Drawer -->
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button id="close-cart">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items-container">
+            <!-- Items will be added here -->
+            <p class="empty-msg">Your cart is empty.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="total">
+                <span>Total:</span>
+                <span id="cart-total">$0.00</span>
+            </div>
+            <button class="checkout-btn">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg-text">NIKE</div>
+        <div class="glow-circle"></div>
+        
+        <div class="hero-content">
+            <h2 id="hero-sub">New Collection</h2>
+            <h1 id="hero-title">AIR MAX <br> PULSE</h1>
+            <div class="hero-btns" id="hero-cta">
+                <a href="#products" class="btn btn-primary">Shop Now</a>
+                <a href="#" class="btn btn-outline">Explore</a>
+            </div>
+        </div>
+
+        <div class="hero-image" id="hero-shoe-container">
+            <img src="images/hero-shoe.png" alt="Nike Hero Shoe" id="main-shoe">
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <div class="category-grid">
+            <div class="cat-card" data-aos="zoom-in" onclick="window.open('https://www.nike.in/w/men-shoes-nik1zy7ok', '_blank')">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=600" alt="Men">
+                <div class="cat-content">
+                    <h3>MEN</h3>
+                    <a href="https://www.nike.in/w/men-shoes-nik1zy7ok" target="_blank">Shop Now</a>
+                </div>
+            </div>
+            <div class="cat-card" data-aos="zoom-in" data-aos-delay="100" onclick="window.open('https://www.nike.in/w/women-shoes-5e1x6zy7ok', '_blank')">
+                <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&q=80&w=600" alt="Women">
+                <div class="cat-content">
+                    <h3>WOMEN</h3>
+                    <a href="https://www.nike.in/w/women-shoes-5e1x6zy7ok" target="_blank">Shop Now</a>
+                </div>
+            </div>
+            <div class="cat-card" data-aos="zoom-in" data-aos-delay="200" onclick="window.open('https://www.nike.in/w/kids-shoes-v4dhzy7ok', '_blank')">
+                <img src="https://images.unsplash.com/photo-1514989940723-e8e51635b782?auto=format&fit=crop&q=80&w=600" alt="Kids">
+                <div class="cat-content">
+                    <h3>KIDS</h3>
+                    <a href="https://www.nike.in/w/kids-shoes-v4dhzy7ok" target="_blank">Shop Now</a>
+                </div>
+            </div>
+            <div class="cat-card" data-aos="zoom-in" data-aos-delay="300" onclick="window.open('https://www.nike.in/w/sports-shoes-zy7ok', '_blank')">
+                <img src="https://images.unsplash.com/photo-1517673132405-a56a62b18acc?auto=format&fit=crop&q=80&w=600" alt="Sports">
+                <div class="cat-content">
+                    <h3>SPORTS</h3>
+                    <a href="https://www.nike.in/w/sports-shoes-zy7ok" target="_blank">Shop Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Section -->
+    <section class="featured" data-aos="fade-up">
+        <div class="section-title">
+            <h2>Featured</h2>
+        </div>
+        <div class="featured-banner" onclick="window.open('https://www.nike.in/w/featured-667qz', '_blank')">
+            <img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&q=80&w=1200" alt="Featured">
+            <div class="banner-content">
+                <h3>STEP INTO THE FUTURE</h3>
+                <p>The Air Max Pulse is here. Bold, bouncy, and built for the streets.</p>
+                <a href="https://www.nike.in/w/featured-667qz" target="_blank" class="btn btn-primary">Shop Featured</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gear Up Section -->
+    <section class="gear-up" data-aos="fade-up">
+        <div class="section-title">
+            <h2>Gear Up</h2>
+        </div>
+        <div class="product-grid">
+            <div class="product-card" onclick="window.open('https://www.nike.in/w/mens-clothing-6ymx6', '_blank')">
+                <div class="product-img-container">
+                    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&q=80&w=400" alt="Apparel 1">
+                </div>
+                <div class="product-info">
+                    <h3>Nike Sportswear</h3>
+                    <p>Premium comfort for everyday wear.</p>
+                    <div class="product-actions">
+                        <a href="https://www.nike.in/w/mens-clothing-6ymx6" target="_blank" class="btn-shop">Shop</a>
+                        <button class="btn-add-cart" onclick="addToCart('Nike Sportswear', 45, 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&q=80&w=400')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" onclick="window.open('https://www.nike.in/w/womens-clothing-5e1x6z6ymx6', '_blank')">
+                <div class="product-img-container">
+                    <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&q=80&w=400" alt="Apparel 2">
+                </div>
+                <div class="product-info">
+                    <h3>Pro Training Gear</h3>
+                    <p>Designed for your toughest workouts.</p>
+                    <div class="product-actions">
+                        <a href="https://www.nike.in/w/womens-clothing-5e1x6z6ymx6" target="_blank" class="btn-shop">Shop</a>
+                        <button class="btn-add-cart" onclick="addToCart('Pro Training Gear', 60, 'https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&q=80&w=400')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="products" id="products">
+        <div class="section-title" data-aos="fade-up">
+            <h2>Trending Now</h2>
+        </div>
+
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="product-img-container">
+                    <img src="images/shoe1.png" alt="Nike Shoe 1">
+                </div>
+                <div class="product-info">
+                    <h3>Air Max Runner</h3>
+                    <p>Experience the ultimate comfort and performance.</p>
+                    <div class="price-tag">
+                        <span class="price">$149.00</span>
+                    </div>
+                    <div class="product-actions">
+                        <a href="https://www.nike.in/t/air-max-pulse-shoes-27v60C/DR0453-001" target="_blank" class="btn-shop">Shop</a>
+                        <button class="btn-add-cart" onclick="addToCart('Air Max Runner', 149, 'images/shoe1.png')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="product-img-container">
+                    <img src="images/shoe2.png" alt="Nike Shoe 2">
+                </div>
+                <div class="product-info">
+                    <h3>Dunk Low Retro</h3>
+                    <p>The classic design that never goes out of style.</p>
+                    <div class="price-tag">
+                        <span class="price">$115.00</span>
+                    </div>
+                    <div class="product-actions">
+                        <a href="https://www.nike.in/t/dunk-low-retro-shoes-8v61f/DD1391-100" target="_blank" class="btn-shop">Shop</a>
+                        <button class="btn-add-cart" onclick="addToCart('Dunk Low Retro', 115, 'images/shoe2.png')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="product-img-container">
+                    <img src="images/hero-shoe.png" alt="Nike Shoe 3">
+                </div>
+                <div class="product-info">
+                    <h3>Air Max 270</h3>
+                    <p>Big air, bold look. Feel the bounce with every step.</p>
+                    <div class="price-tag">
+                        <span class="price">$160.00</span>
+                    </div>
+                    <div class="product-actions">
+                        <a href="https://www.nike.in/t/air-max-270-shoes-7v61f/AH8050-002" target="_blank" class="btn-shop">Shop</a>
+                        <button class="btn-add-cart" onclick="addToCart('Air Max 270', 160, 'images/hero-shoe.png')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-logo">
+             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21.58 6.4c-.13-.03-5.22-.64-10.87 2.37-4.11 2.21-6.17 5.75-6.72 7.03-.08.18-.04.38.1.51.1.09.23.14.36.14.05 0 .1-.01.16-.03.04-.01 5.38-1.93 11.23-1.64 3.39.16 5.86 1.48 6.06 1.59.1.06.22.09.33.09.11 0 .22-.03.32-.09.18-.11.27-.32.22-.52-.04-.15-.65-7.79-1.19-9.45z" fill="white"/>
+            </svg>
+        </div>
+        <ul class="footer-links">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+        </ul>
+        <p class="copyright">&copy; 2026 Nike, Inc. All Rights Reserved</p>
+    </footer>
+
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
